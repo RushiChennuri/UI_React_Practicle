@@ -36,7 +36,7 @@ function loadProducts(url){
 function handleAddtoCart(e) {
     const id = e.target.id;
 
-    fetch(`https://fakestoreapi.com/products/${id}`)
+    fetch("https://fakestoreapi.com/products/${id}")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -55,7 +55,7 @@ function handleAddtoCart(e) {
 
 function handlecatagorychange(e){
     const key = e.target.value;
-    loadProducts("https://fakestoreapi.com/products/category/electronics")
+    loadProducts(`https://fakestoreapi.com/products/category/${key}`);
 
 
 }
